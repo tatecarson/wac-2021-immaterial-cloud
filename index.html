@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <style>
+    .container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding-top: 100%;
+      /* 1:1 Aspect Ratio */
+    }
+
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+  <title>3D Audio Sound Design for Web-based Games</title>
+  <link href="big.css" rel="stylesheet" type="text/css" />
+  <link href="themes/dsu.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="big.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <style>
+    .hljs {
+      overflow-x: initial;
+    }
+  </style>
+  <script src="js/index-citations-global.js"></script>
+
+  <script>
+    function run() {
+      hljs.initHighlightingOnLoad();
+
+      IndexCitations({
+        referenceId: "#citations",
+      });
+
+      const citations = document.querySelectorAll(".citationLink");
+      // TODO: update this to be the last slide whenever you make it
+      citations.forEach((citation) => (citation.href = "#53"));
+
+      const ref = document.querySelectorAll("#citations cite");
+
+      ref.forEach((reference) => {
+        var el = document.createElement("span");
+        el.innerHTML = '<a href="javascript:history.back()">&#8627;</a>';
+        insertAfter(reference, el);
+      });
+    }
+
+    if (document.readyState != "loading") {
+      run();
+    } else {
+      document.addEventListener("DOMContentLoaded", run);
+    }
+
+    function insertAfter(referenceNode, newNode) {
+      referenceNode.parentNode.insertBefore(
+        newNode,
+        referenceNode.nextSibling
+      );
+    }
+  </script>
+  <script src="big.js"></script>
+  <script src="js/lazysizes.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <div>
+      immaterial.cloud </br>
+      Using peer-to-peer technologies for music
+    </div>
+    <div>
+      <em> Tate Carson </em>
+    </div>
+    <notes>immaterial.cloud is an immersive audiovisual installation that explores a possible networked future of
+      peer-to-peer technologies, away from cloud computing. Participants experience the work via two to four
+      smartphones placed in different locations in a room. As participants walk up to a phone, they see a representation
+      of themselves through data. If the participant gets close enough, the phone trig- gers a change in the sound of
+      immaterial.cloud and the other phones follow.</notes>
+  </div>
+  <div>
+
+    <img src="images/immaterialcloud1.jpg"><img>
+    <notes>
+      immaterial.cloud is a web application that uses peer-to- peer technologies to send data between phones without the
+      need for an intermediary server. immaterial.cloud creates the chance for a shared space with participants by using
+      technology collectively. It requires the phones to act to- gether, not as individuals as is usual in this era of
+      person- alized devices. Experiencing immaterial.cloud presents an opportunity for a restoration of attention
+      fatigued by an overuse of technology.
+      </br>
+      The idea for immaterial.cloud emerged to create a commu- nal experience during the COVID-19 shelter-in-place
+      orders during which many people have turned to the internet for communication and entertainment. While social
+      networks such as Facebook or Google seek our attention for profit, im- material.cloud seeks a deep attention that
+      creates a shared sense of place and time for the participants.
+
+    </notes>
+  </div>
+  <div>
+    <img src="images/p2p.webp" alt="credit: rand corporation" />
+
+    <notes>
+
+      immaterial.cloud is a web application that uses peer-to- peer technologies to send data between phones without the
+      need for an intermediary server similar to the decentralized or distributed part of this rand corp diagram.
+      immaterial.cloud creates the chance for a shared space with participants by using
+      technology collectively. It requires the phones to act together, not as individuals as is usual in this era of
+      personalized devices. Experiencing immaterial.cloud presents an opportunity for a restoration of attention
+      fatigued by an overuse of technology.
+      </br>
+      The idea for immaterial.cloud emerged to create a communal experience during the COVID-19 shelter-in-place
+      orders during which many people have turned to the internet for communication and entertainment. While social
+      networks such as Facebook or Google seek our attention for profit, im- material.cloud seeks a deep attention that
+      creates a shared sense of place and time for the participants
+    </notes>
+  </div>
+  <div>
+    Attention Economy
+
+    <notes>
+
+      What is attention and why is it important? Attention is conscious processing of in- formation from intentionally
+      chosen sources [44]. Attention is a scarce resource, which is to say, “The exposure of subjects to signals is so
+      strong that having an impact by absorb- ing part of their attention capacity requires to send strong signals and
+      to target them on audiences with relatively exhausted perception capacity [34].” Many attentional senders compete
+      for the attention of receivers with limited attention capacity. The way we pay attention is changing because of
+      addictive technologies.
+
+      Attention can be divided into types, transitory attention is often involuntary and fleet- ing while sustained
+      attention is voluntary and longer lasting [100]. Hyper attention is a further demarcation discussed by N.
+      Katherine Hayles and is “characterized by switch- ing focus rapidly among different tasks, preferring multiple
+      information streams, seeking a high level of stimulation, and having a low tolerance for boredom [45].” Hyper
+      attention is transitory attention for the digital age.
+    </notes>
+  </div>
+  <div>
+    <img src="images/google-search.png"></img>
+
+    <notes>
+      Perhaps a more familiar example of the attention economy would be Google Search. Figure 2.1 shows an example of a
+      recent search where Google Search predicted search results based on my browsing history on Google Books then
+      automatically made available to Google Search, allowing the prediction to happen. The perniciousness of this is
+      that this prediction is a useful tool, and most users won’t take the time to stop and analyze how it works. They
+      will just enjoy the ease of use that data sharing has given them, without thinking about the consequences in loss
+      of privacy.
+    </notes>
+  </div>
+
+  <div>
+    Alternatives?
+
+    <notes>
+      How can the attention economy be resisted? We must re- design the technologies that encourage a capitalist percep-
+      tion of time, place, self, and community. Deepening one’s concept of place will extend an awareness of history and
+      cur- rent connection to everything around them. Odell suggests that “doing nothing” moves our attention from
+      economic concerns to the physical, place based domain [18]. Doing nothing, or sitting out the attention economy is
+      an active proposition and “entails an active process of listening that seeks out the effects of racial,
+      environmental, and economic injustice and brings about real change [18].”
+
+      Because of these platforms’ flaws we shouldn’t be using them to distribute and make our art. These platforms re-
+      ward a way of being that isn’t beneficial to society. They resist the concept of interconnection, by emphasizing
+      our differences and not allowing us to show fuller versions of ourselves. We must “stand apart”[18] as Odell
+      suggests, and create new systems for communication on the internet.
+      How can we regain attention? One way is through art, another through nature. Conceptual art encourages a per-
+      ception of time on different scales and tempos and allows for deep attention.
+    </notes>
+  </div>
+
+  <div>
+    Attention Restoration Theory (ART)
+
+    <div>
+      <em> Rachel and Stephen Kaplan </em>
+    </div>
+
+    <notes>
+      Interacting with nature can also restore our attention. Psychologist Kaplan found that the natural envi- ronment
+      aids in stress reduction by providing a “restorative environment” that reduces the fatigue caused by directed
+      attention [9]. Attention Restoration Theory (ART) claims that we use directed attention in our daily lives to
+      function. Sustained directed attention leads to cognitive depletion and mental fatigue [10]. Kaplan didn’t mention
+      sound directly in his research, but a recent study by Ratcliffe has extended Kaplan’s research to show that
+      certain bird sounds may pro- vide restorative benefits [21].
+    </notes>
+  </div>
+  <div>
+    <div>VR Sequencer</div>
+    <div>by Chase Mitchusson</div>
+    <notes>
+      This piece was an inspiration for this lesson. Chase creates a sequencer
+      that is perfomed by throwing dice in VR. Multiple playheads create
+      interesting polyrhythms. There is no goal for the game, just to make
+      music.
+    </notes>
+  </div>
+  <div>
+    <iframe class="responsive-iframe azyload" src="https://www.youtube.com/embed/ygoO0Hg4wAo" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <div>
+    Demo:
+    <div>
+      <a href="https://3d-audio-sequencer-game.netlify.app/"
+        target="blank">https://3d-audio-sequencer-game.netlify.app/</a>
+    </div>
+  </div>
+
+  <div>
+    <div>Technology used:</div>
+    <ul>
+      <li>3D Graphics - <a href="https://threejs.org/">Three.js</a></li>
+      <li>Audio - <a href="https://tonejs.github.io/">Tone.js</a></li>
+    </ul>
+  </div>
+  <div>Concepts</div>
+  <div>
+    <div>3D Audio</div>
+    <div>
+      <ul>
+        <li>
+          Directivity - a pattern which represents how a sound emanates from a
+          source
+        </li>
+        <li>
+          Rolloff Factor - volume is reduced as the listener moves away from a
+          source
+        </li>
+        <li>
+          Reference Distance - how close you need to be for volume reduction
+          to take place
+        </li>
+      </ul>
+    </div>
+    <notes>Another name for 3d sound would be spatial sound. This just refers to
+      placing a sound in space using panning. It can also refer to other
+      techniques that can mimic how we locate sounds in everyday life such as
+      reverb or volume reduction. Precedence effect
+    </notes>
+  </div>
+  <div>
+    <div>Procedural Audio</div>
+    <div>
+      <ul>
+        <li>Algorithmic techniques to keep the sound from repeating</li>
+        <li>
+          In this piece, the settings of a synthesizer are adjusted based on
+          the players distance from the spheres
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    Create a sphere:
+    <pre>
+        <code class="javscript">
+          mesh1 = new Mesh(sphere, material1);
+          mesh1.position.set(-250, 30, 0);
+          scene.add(mesh1);
+          objects.push(mesh1);
+        </code>
+      </pre>
+  </div>
+
+  <div>
+    Load audio and set spatial parameters:
+    <pre><code class="javascript">
+  
+        audioLoader.load("./sounds/walking-on-glass.mp3", function (buffer) {
+          sound1.setBuffer(buffer);
+          sound1.setRefDistance(75);
+          sound1.setDirectionalCone(180, 230, 0.1);
+      
+          const helper1 = new PositionalAudioHelper(sound1, 75);
+          sound1.add(helper1);
+      
+          sound1.setLoop(true);
+          sound1.play();
+        });
+      
+        mesh1.add(sound1);
+      </code></pre>
+
+    <notes>
+      directional cone
+      <br />
+      inner angle - no sound reduction
+      <br />
+      outer angle - reduction by factor of outer gain
+    </notes>
+  </div>
+
+  <div>
+    Load audio and set spatial parameters:
+    <pre><code class="javascript">
+  
+        audioLoader.load("./sounds/walking-on-glass.mp3", function (buffer) {
+          sound1.setBuffer(buffer);
+          <em>
+          sound1.setRefDistance(75);
+          </em>
+          sound1.setDirectionalCone(180, 230, 0.1);
+      
+          const helper1 = new PositionalAudioHelper(sound1, 75);
+          sound1.add(helper1);
+      
+          sound1.setLoop(true);
+          sound1.play();
+        });
+      
+        mesh1.add(sound1);
+      </code></pre>
+
+    <notes>
+      A reference distance for reducing volume as source moves further from
+      the listener. For distances less than this, the volume is not reduced.
+    </notes>
+  </div>
+
+  <div>
+    Load audio and set spatial parameters:
+    <pre><code class="javascript">
+  
+        audioLoader.load("./sounds/walking-on-glass.mp3", function (buffer) {
+          sound1.setBuffer(buffer);
+          sound1.setRefDistance(75);
+          <em>
+          sound1.setDirectionalCone(180, 230, 0.1);
+          </em>
+      
+          const helper1 = new PositionalAudioHelper(sound1, 75);
+          sound1.add(helper1);
+      
+          sound1.setLoop(true);
+          sound1.play();
+        });
+      
+        mesh1.add(sound1);
+      </code></pre>
+
+    <notes>
+      directional cone
+      <br />
+      inner angle - no sound reduction
+      <br />
+      outer angle - reduction by factor of outer gain
+    </notes>
+  </div>
+  <div>
+    When a player approaches a sphere:
+    <pre>
+        <code class="javascript">
+          const rateMap = map(getDistance(myLocation, mesh1), 20, 50, 1, 3);
+          kalimbaSeq.playbackRate = rateMap;
+          delay.delayTime.value = "16n";
+          delay.feedback.value = 0.3;
+          kalimba.harmonicity.value = 1;
+        </code>
+      </pre>
+  </div>
+  <div>
+    <div>Extensions: Ambisonic and Binaural Audio</div>
+    <ul>
+      <li>
+        <a href="https://resonance-audio.github.io/resonance-audio/" target="blank">Resonance Audio</a>
+        - Multiple platforms
+      </li>
+      <li>
+        <a href="https://www.envelop.us/software">Envelop for Live</a> -
+        Ableton Live
+      </li>
+      <li>
+        <a href="http://www.ambisonictoolkit.net/">Ambisonic Toolkit</a> -
+        Reaper and SuperCollider
+      </li>
+    </ul>
+
+    <notes>
+      Ambisonics - a sound format for encoding and decoding sounds and a means
+      for representing that sound as a point in space. If recording in
+      ambisonics one can record the directionality of a source including its
+      height.
+    </notes>
+  </div>
+  <div id="citations">References</div>
+
+  <div>
+    <div>Thank You</div>
+    <em> tcarso2@lsu.edu </em>
+    <a href="https://tatecarson.com" target="blank">https://tatecarson.com</a>
+  </div>
+  <div>Questions?</div>
+</body>
+
+</html>

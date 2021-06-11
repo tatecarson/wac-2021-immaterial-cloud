@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "urw-din";
+  src: url("https://use.typekit.net/af/e69b71/00000000000000003b9b0ee6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/e69b71/00000000000000003b9b0ee6/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/e69b71/00000000000000003b9b0ee6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+}
+
+body {
+  background: #004165;
+  color: #fff;
+  font-family: urw-din, sans-serif !important;
+}
+
+em {
+  color: #adafaf;
+}
+
+a {
+  color: #00a9e0;
+  text-decoration-skip: ink;
+}
+
+a:hover {
+  background: #fff;
+}
+
+/* pre {
+  margin: 0;
+  padding: 0.2em;
+  background: #fff;
+  color: #000;
+  font-weight: normal;
+} */
+
+pre em {
+  color: #000;
+  background: #86e1ff;
+}
