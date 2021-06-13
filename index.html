@@ -100,7 +100,7 @@
       immaterial.cloud is a web application that uses peer-to- peer technologies to send data between phones without the
       need for an intermediary server. immaterial.cloud creates the chance for a shared space with participants by using
       technology collectively. It requires the phones to act to- gether, not as individuals as is usual in this era of
-      person- alized devices. Experiencing immaterial.cloud presents an opportunity for a restoration of attention
+      personalized devices. Experiencing immaterial.cloud presents an opportunity for a restoration of attention
       fatigued by an overuse of technology.
       </br>
       The idea for immaterial.cloud emerged to create a commu- nal experience during the COVID-19 shelter-in-place
@@ -130,7 +130,20 @@
   </div>
   <div>
     Attention Economy
-
+    <cite>
+      Sarah Hartman-Caverly. Human nature is not a machine: On liberty, attention engineering, and learning analytics.
+      Library Trends, 68(1):24–53, 2019.
+    </cite>
+    <cite>
+      Josef Falkinger. Attention economies. Journal of Economic Theory, 133(1):266–294, 2007.
+    </cite>
+    <cite>
+      T. Wu. The Attention Merchants: The Epic Scramble to Get Inside Our Heads. Vintage Books, 2017.
+    </cite>
+    <cite>
+      N Katherine Hayles. Hyper and deep attention: The generational divide in cognitive modes. Profession, pages
+      187–199, 2007.
+    </cite>
     <notes>
 
       What is attention and why is it important? Attention is conscious processing of in- formation from intentionally
@@ -160,9 +173,11 @@
     </notes>
   </div>
 
-  <div>
+  <div class="nowrap">
     Alternatives?
-
+    <cite>
+      J. Odell. How to Do Nothing: Resisting the Attention Economy. Melville House, Brooklyn, London, 2019.
+    </cite>
     <notes>
       How can the attention economy be resisted? We must re- design the technologies that encourage a capitalist percep-
       tion of time, place, self, and community. Deepening one’s concept of place will extend an awareness of history and
@@ -179,12 +194,16 @@
       ception of time on different scales and tempos and allows for deep attention.
     </notes>
   </div>
-
+  <!-- 
   <div>
     Attention Restoration Theory (ART)
 
     <div>
       <em> Rachel and Stephen Kaplan </em>
+      <cite>
+        S. Kaplan. The restorative benefits of nature: Toward an integrative framework. In: Journal of Environmental
+        Psychology., 15:169–182, 1995.
+      </cite>
     </div>
 
     <notes>
@@ -195,18 +214,144 @@
       sound directly in his research, but a recent study by Ratcliffe has extended Kaplan’s research to show that
       certain bird sounds may pro- vide restorative benefits [21].
     </notes>
+  </div> -->
+  <div>
+    Background
   </div>
   <div>
-    <div>VR Sequencer</div>
-    <div>by Chase Mitchusson</div>
+    <div>Audience as a speaker array
+      <cite>B. Taylor. A History of the Audience as a Speaker Array. In Proceedings of the International Conference on
+        New Interfaces for Musical Expression, volume 481-486, Aalborg University Copenhagen, Denmark, 2017.</cite>
+    </div>
+
+    <ul>
+      <li>Soundworks
+        <cite>S. Robaszkiewicz and N. Schnell. Soundworks–A playground for artists and developers to create
+          collaborative mobile web performances. In WAC-1st Web Audio Conference, 2015.</cite>
+      </li>
+      <li>Nexus
+        <cite>
+          J. Allison, Y. Oh, and B. Taylor. NEXUS: Collaborative Performance for the Masses, Handling Instrument
+          Interface Distribution Through the Web. In Proceedings of the International Conference on New Interfaces for
+          Musical Expression (NIME), pages 1–6, 2013.
+        </cite>
+      </li>
+      <li>massMobile
+        <cite>
+          N. Weitzner, J. Freeman, Y.-L. Chen, and S. Garrett. massMobile: Towards a flexible framework for large-scale
+          participatory collaborations in live performances. Organised Sound, 18(1):30–42, 2013.
+        </cite>
+      </li>
+      <li>Rhizome
+        <cite>T. Shaw, S. Piquemal, and J. Bowers. Fields: An Exploration into the use of Mobile Devices as a Medium for
+          Sound Diffusion. In Proceedings of the International Conference on New Interfaces for Musical Expression,
+          pages 281–284, Baton Rouge, Louisiana, 2015.</cite>
+      </li>
+    </ul>
     <notes>
-      This piece was an inspiration for this lesson. Chase creates a sequencer
-      that is perfomed by throwing dice in VR. Multiple playheads create
-      interesting polyrhythms. There is no goal for the game, just to make
-      music.
+      mmaterial.cloud uses the audience as a speaker array, a practice with a long history in music [28]. Many
+      frameworks and compositions use distributed smartphone speaker sys- tems with the Web Audio API. Frameworks such
+      as Schnell and Robaszkiewicz’s Soundworks [22], Jesse Allison’s Nexus [1], Weitzner and Freeman’s massMobile [30]
+      and Piquemal’s Rhizome [25] are designed for artists who don’t want to cre- ate bespoke systems. These frameworks
+      run on a variety of centralized server configurations, anywhere that Node.js can run. These systems have taken a
+      variety of networking approaches that center on cloud computing, whether run- ning a cloud-based virtual machine
+      (VM) such as Amazon’s EC2 or Google Cloud [2], a “serverless” host like Zeit’s Vercel (formerly known as Now) [5],
+      a Platform as a Service
+
+      (PaaS) [7] such as PubNub, or server running on one’s own laptop [14]. Many papers don’t describe projects’
+      hosting configurations, but because of the frameworks used, one can assume that they run on some ver- sion of the
+      aforementioned technology [25, 8, 13, 26]. The lack of information about hosting configurations often leaves room
+      for inquiry. What these systems have in common is that they use centralized networking topology.
     </notes>
   </div>
   <div>
+    <img src="images/napster-2.jpg" alt="" width="80%">
+    <notes>
+      Peer-to-peer systems aren’t new but had their heyday in the public imagination during the height of online file
+      shar- ing when Napster was operating between 1999 and 2001 [19].
+    </notes>
+  </div>
+  <div>
+    <div>early p2p music projects</div>
+    <ul>
+      <li>Tanaka mobile music system with PDAs
+        <cite>
+          A. Tanaka. Mobile music making. In Proceedings of the 2004 conference on New interfaces for musical
+          expression, pages 154–156, 2004.
+        </cite>
+      </li>
+      <li>
+        Lee, Essl, and Mao - MANET
+        <cite>
+          S. W. Lee, G. Essl, and Z. M. Mao. Distributing Mobile Music Applications for Audience Participation Using
+          Mobile Ad-hoc Network (MANET). In NIME, pages 533–536, 2014.
+        </cite>
+      </li>
+    </ul>
+    <notes>
+      Because of the popularity and common knowledge of
+      those systems, interactive music works began to emerge that used and extended similar technologies. In 2004 Tanaka
+      created a collaborative music-making system based on personal digital assistants (PDAs), which extend the simple
+      sharing of music on peer-to-peer systems allowing users who were near each other to interact through Service
+      Discovery Protocol (SDP) [27]. Lee, Essl, and Mao have used SDP effectively to distribute applications to mobile
+      phones in a mobile ad hoc network (MANET) [11].
+    </notes>
+  </div>
+  <div>
+    <div>
+      WebRTC systems
+    </div>
+    <ul>
+      <li>Soundtrap
+        <cite>F. Lind and A. MacPherson. Soundtrap: A collaborative music studio with Web Audio. London, UK,
+          2017.</cite>
+      </li>
+      <li>GroupLoop
+        <cite>
+          D. B. Ramsay and J. A. Paradiso. Grouploop: A collaborative, network-enabled audio feedback instrument. In New
+          Interfaces for Musical Expression, pages 251–254, Baton Rouge, Louisiana, 2015.
+        </cite>
+      </li>
+      <li>Hear-Here
+        <cite>
+          A. Black. Hear-Here: A choreographed peer-to-peer network for live participation on the radio. In Proceedings
+          of the 12th International Audio Mostly Conference on Augmented and Participatory Sound and Music Experiences,
+          pages 1–6, London, UK, 2017.
+        </cite>
+      </li>
+      <li>Fun With Chords
+        <cite>
+          L. Xing, M. Ulrich, and O. Diab. Fun With Chords–A Distributed Music Player.
+        </cite>
+      </li>
+    </ul>
+
+    <notes>
+      Several web audio projects have used WebRTC. Lind’s Soundtrap uses WebRTC’s video channel [12]. Ramsay and
+      Paradiso’s GroupLoop [20] uses the audio channel to send audio between clients to create a feedback based perfor-
+      mance system, and Black’s Hear-Here [3] uses it to coordi- nate an FM radio broadcast out of the audio of
+      distributed clients. Xing, Ulrich and Diab’s Fun With Chords [31], a distributed music player, uses the data
+      channel. Authors gave few reasons for choosing WebRTC over other methods in the cited papers, but one can assume
+      they chose WebRTC for the reasons same that interest me—the minimal need for servers.
+    </notes>
+  </div>
+
+  <div>
+    How does immaterial.cloud use WebRTC?
+
+    <notes>
+      immaterial.cloud 1 is networked using WebRTC (Web Real-Time Communication), which allows for sites to stream
+      audio, video, or data between each other without an inter- mediary.
+
+      immaterial.cloud uses the data channel capability of We- bRTC, defined by the RTCDataChannel interface. This in-
+      terface allows for bidirectional transfer of peer-to-peer data [16]. The work uses the PeerJS2 library to simplify
+      the pro- cess of setting up connections and dealing with messaging. PeerJS provides an API like Socket.io3 to send
+      and receive messages with few lines of code. PeerJS also includes a sig- naling server which allows a programmer
+      to use the library without having to set up and run a server. Though immate- rial.cloud uses video as it’s main
+      mode of user interaction, the RTCPeerConnection API isn’t used because video isn’t streamed between devices.
+    </notes>
+  </div>
+  <!-- <div>
     <iframe class="responsive-iframe azyload" src="https://www.youtube.com/embed/ygoO0Hg4wAo" frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
@@ -395,7 +540,7 @@
       ambisonics one can record the directionality of a source including its
       height.
     </notes>
-  </div>
+  </div> -->
   <div id="citations">References</div>
 
   <div>
