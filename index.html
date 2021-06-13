@@ -50,7 +50,7 @@
 
       const citations = document.querySelectorAll(".citationLink");
       // TODO: update this to be the last slide whenever you make it
-      citations.forEach((citation) => (citation.href = "#53"));
+      citations.forEach((citation) => (citation.href = "#16"));
 
       const ref = document.querySelectorAll("#citations cite");
 
@@ -265,7 +265,7 @@
     </notes>
   </div>
   <div>
-    <img src="images/napster-2.jpg" alt="" width="80%">
+    <img src="images/napster-2.jpg" alt="Spencer Platt/Newsmakers/Getty" width="80%">
     <notes>
       Peer-to-peer systems aren’t new but had their heyday in the public imagination during the height of online file
       shar- ing when Napster was operating between 1999 and 2001 [19].
@@ -340,7 +340,7 @@
     How does immaterial.cloud use WebRTC?
 
     <notes>
-      immaterial.cloud 1 is networked using WebRTC (Web Real-Time Communication), which allows for sites to stream
+      immaterial.cloud is networked using WebRTC (Web Real-Time Communication), which allows for sites to stream
       audio, video, or data between each other without an inter- mediary.
 
       immaterial.cloud uses the data channel capability of We- bRTC, defined by the RTCDataChannel interface. This in-
@@ -351,204 +351,79 @@
       mode of user interaction, the RTCPeerConnection API isn’t used because video isn’t streamed between devices.
     </notes>
   </div>
-  <!-- <div>
-    <iframe class="responsive-iframe azyload" src="https://www.youtube.com/embed/ygoO0Hg4wAo" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
-  <div>
-    Demo:
-    <div>
-      <a href="https://3d-audio-sequencer-game.netlify.app/"
-        target="blank">https://3d-audio-sequencer-game.netlify.app/</a>
-    </div>
-  </div>
 
   <div>
-    <div>Technology used:</div>
-    <ul>
-      <li>3D Graphics - <a href="https://threejs.org/">Three.js</a></li>
-      <li>Audio - <a href="https://tonejs.github.io/">Tone.js</a></li>
-    </ul>
-  </div>
-  <div>Concepts</div>
-  <div>
-    <div>3D Audio</div>
-    <div>
-      <ul>
-        <li>
-          Directivity - a pattern which represents how a sound emanates from a
-          source
-        </li>
-        <li>
-          Rolloff Factor - volume is reduced as the listener moves away from a
-          source
-        </li>
-        <li>
-          Reference Distance - how close you need to be for volume reduction
-          to take place
-        </li>
-      </ul>
-    </div>
-    <notes>Another name for 3d sound would be spatial sound. This just refers to
-      placing a sound in space using panning. It can also refer to other
-      techniques that can mimic how we locate sounds in everyday life such as
-      reverb or volume reduction. Precedence effect
+
+    <img src="images/setupInterface.png" alt="">
+    <notes>
+      immaterial.cloud needs two to four smartphones (iPhone or Android) connected to the internet via WiFi or a
+      cellular network. All sound during the installation is played through the phones via a web browser.
+      immaterial.cloud will work with a group of participants or just one. A user interacts with immaterial.cloud
+      through motion, waving a hand or walking up to a phone (see Figure 1). The camera of the phone tracks any change
+      in motion, triggers an update to the sound playing, and updates all other phones.
     </notes>
   </div>
+
   <div>
-    <div>Procedural Audio</div>
-    <div>
-      <ul>
-        <li>Algorithmic techniques to keep the sound from repeating</li>
-        <li>
-          In this piece, the settings of a synthesizer are adjusted based on
-          the players distance from the spheres
-        </li>
-      </ul>
-    </div>
+    <img src="images/userInteraction.png" alt="">
+    <notes>
+      A participant joins the network by going to https:// immaterial.cloud and entering the ID of a chosen “host”
+      phone. Though the “host” phone doesn’t need to enter any ID to play, the participant still needs to press join to
+      start the sound (see Figure 2). It’s necessary to use IDs so imma- terial.cloud knows which phones to send
+      messages to (with- out participants having to sign up for accounts).
+    </notes>
   </div>
 
   <div>
-    Create a sphere:
-    <pre>
-        <code class="javscript">
-          mesh1 = new Mesh(sphere, material1);
-          mesh1.position.set(-250, 30, 0);
-          scene.add(mesh1);
-          objects.push(mesh1);
-        </code>
-      </pre>
+    <img src="images/technical-overview.png" alt="">
+    <notes>
+      A typical interaction might go as follows. A user waves their hand over a phone, which is assigned a preset of
+      “deeper,” then the preset is sent to each of the other phones, first traveling through the server phone to change
+      its preset to “deeper” (see Figure 3). Figure 4 shows how data flows from the triggered phone to the server phone,
+      then out to the other peer phones, setting the other phones sound to the chosen preset. The user doesn’t have fine
+      grained control over how the sounds develope but can explore the different
+      presets by triggering each phone.
+
+      Each preset uses one of four granulated samples, a ring tone, a double bass improvisation, a music box, or tubular
+      bells. The presets control the pitch, attack, release, and den- sity for each grain of the granular synthesis.
+      When a player triggers a new preset, the system interpolates between the previous preset and the new preset over a
+      randomly chosen length of time. This combination of presets and interpola- tion provides different sound
+      possibilities without too much chaotic variation.
+
+    </notes>
   </div>
 
   <div>
-    Load audio and set spatial parameters:
-    <pre><code class="javascript">
-  
-        audioLoader.load("./sounds/walking-on-glass.mp3", function (buffer) {
-          sound1.setBuffer(buffer);
-          sound1.setRefDistance(75);
-          sound1.setDirectionalCone(180, 230, 0.1);
-      
-          const helper1 = new PositionalAudioHelper(sound1, 75);
-          sound1.add(helper1);
-      
-          sound1.setLoop(true);
-          sound1.play();
-        });
-      
-        mesh1.add(sound1);
-      </code></pre>
+    Future Work
 
     <notes>
-      directional cone
-      <br />
-      inner angle - no sound reduction
-      <br />
-      outer angle - reduction by factor of outer gain
+      Peer-to-peer technologies provide a pathway to a form of networked communication that doesn’t rely on the
+      attention economy. immaterial.cloud is an early step in the move- ment towards peer-to-peer networked art. I
+      focused on the attention economy to describe why it is important to find alterative means for networking. It’s
+      important for artists to explore technologies independent from major platforms to ensure control over their work.
+      While immaterial.cloud uses WebRTC, I think it is impor- tant to outline possible future protocols. Many
+      technologies are currently in development that seek to invert the current
+      client/server architecture of the web. These systems share a vision for a decentralized internet. Some popular
+      protocols include Interplanitary File System (IPFS), Secure Scuttle- butt6, Hypercore Protocol7, and Matrix8.
+      These protocols vary in design and goals. One could imagine a composer choosing a specific protocol as a
+      compositional choice that would make for more interesting modes of interaction for our networked web audio
+      creations of the future.
     </notes>
   </div>
 
-  <div>
-    Load audio and set spatial parameters:
-    <pre><code class="javascript">
-  
-        audioLoader.load("./sounds/walking-on-glass.mp3", function (buffer) {
-          sound1.setBuffer(buffer);
-          <em>
-          sound1.setRefDistance(75);
-          </em>
-          sound1.setDirectionalCone(180, 230, 0.1);
-      
-          const helper1 = new PositionalAudioHelper(sound1, 75);
-          sound1.add(helper1);
-      
-          sound1.setLoop(true);
-          sound1.play();
-        });
-      
-        mesh1.add(sound1);
-      </code></pre>
-
-    <notes>
-      A reference distance for reducing volume as source moves further from
-      the listener. For distances less than this, the volume is not reduced.
-    </notes>
-  </div>
-
-  <div>
-    Load audio and set spatial parameters:
-    <pre><code class="javascript">
-  
-        audioLoader.load("./sounds/walking-on-glass.mp3", function (buffer) {
-          sound1.setBuffer(buffer);
-          sound1.setRefDistance(75);
-          <em>
-          sound1.setDirectionalCone(180, 230, 0.1);
-          </em>
-      
-          const helper1 = new PositionalAudioHelper(sound1, 75);
-          sound1.add(helper1);
-      
-          sound1.setLoop(true);
-          sound1.play();
-        });
-      
-        mesh1.add(sound1);
-      </code></pre>
-
-    <notes>
-      directional cone
-      <br />
-      inner angle - no sound reduction
-      <br />
-      outer angle - reduction by factor of outer gain
-    </notes>
-  </div>
-  <div>
-    When a player approaches a sphere:
-    <pre>
-        <code class="javascript">
-          const rateMap = map(getDistance(myLocation, mesh1), 20, 50, 1, 3);
-          kalimbaSeq.playbackRate = rateMap;
-          delay.delayTime.value = "16n";
-          delay.feedback.value = 0.3;
-          kalimba.harmonicity.value = 1;
-        </code>
-      </pre>
-  </div>
-  <div>
-    <div>Extensions: Ambisonic and Binaural Audio</div>
-    <ul>
-      <li>
-        <a href="https://resonance-audio.github.io/resonance-audio/" target="blank">Resonance Audio</a>
-        - Multiple platforms
-      </li>
-      <li>
-        <a href="https://www.envelop.us/software">Envelop for Live</a> -
-        Ableton Live
-      </li>
-      <li>
-        <a href="http://www.ambisonictoolkit.net/">Ambisonic Toolkit</a> -
-        Reaper and SuperCollider
-      </li>
-    </ul>
-
-    <notes>
-      Ambisonics - a sound format for encoding and decoding sounds and a means
-      for representing that sound as a point in space. If recording in
-      ambisonics one can record the directionality of a source including its
-      height.
-    </notes>
-  </div> -->
   <div id="citations">References</div>
 
   <div>
     <div>Thank You</div>
-    <em> tcarso2@lsu.edu </em>
+    <em> tatecarson@pm.me </em>
     <a href="https://tatecarson.com" target="blank">https://tatecarson.com</a>
   </div>
-  <div>Questions?</div>
+  <div>
+
+    Slides - <a href="https://wac-2021.netlify.app">https://wac-2021.netlify.app</a>
+
+  </div>
+
 </body>
 
 </html>
