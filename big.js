@@ -59,11 +59,13 @@ addEventListener("load", () => {
     let sc = slideDivs[n],
       slideDiv = sc.firstChild;
     if (sc._notes.length) {
+      console.clear()
       console.group(n);
+      
       for (let note of sc._notes)
         console.log(
           "%c%s",
-          "padding:5px;font-family:serif;font-size:25px;line-height:150%;",
+          "padding:1px;font-family:serif;font-size:26px;line-height:150%;",
           note
         );
       console.groupEnd();
